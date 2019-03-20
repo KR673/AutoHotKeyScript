@@ -45,11 +45,14 @@ k::Down
 l::Right
 [::Home
 ]::End
-N::send +^{left}
-M::send +^{Right}
+N::send ^{left}
+M::send ^{Right}
++N::send +^{left}
++M::send +^{Right}
 ,::send ^!{left}
 .::send ^!{Right}
 U::send {BackSpace}
+^U::send ^{BackSpace}
 return
 #If
 
