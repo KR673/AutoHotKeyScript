@@ -52,7 +52,7 @@ M::send ^{Right}
 ,::send ^!{left}
 .::send ^!{Right}
 U::send {BackSpace}
-^U::send ^{BackSpace}
+Y::send ^{BackSpace}
 return
 #If
 
