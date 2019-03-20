@@ -1,2 +1,2 @@
-# AutoHotKey_Script
+# AutoHotKeyScript
 autoHotKey脚本
