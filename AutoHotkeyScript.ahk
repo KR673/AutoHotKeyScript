@@ -142,3 +142,12 @@ else {
 	WinActivate, ahk_class WizNoteMainFrame
 	return
 }
+
+; ----------------------------
+; 热字符串
+; ----------------------------
+
+:*:cjc::create java class
+:*:138p::13838530526
+::jp::123456
+
