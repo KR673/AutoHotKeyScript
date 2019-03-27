@@ -1,63 +1,20 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;replace CapsLock to LeftEnter; CapsLock = Alt CapsLock
-SetTitleMatchMode, 2 ;设置标题匹配模式模糊
-; ::
-; WinActivate, 登陆
-; {
-; 	click 953, 602
-; 	return
-; }
-; else return
-
-; $CapsLock::Enter
-*Capslock::SetCapsLockState, Off
-RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
-
-!u::Send ^c !{tab} ^v
-
+﻿
 ;RAlt & S::run C:\Users\Administrator\Desktop\AutoHotkey Script.ahk
 
+;在编辑页面, 保存时自动重启脚本
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 ~<^S::
 IfWinActive, ahk_class Chrome_WidgetWin_1
 {
 	run Main.ahk
-	sleep 260
+	sleep 300
  	send {Enter}
 	Return
 }
 else return
 #IfWinActive
 
-; $CapsLock::
-; KeyWait, CapsLock
-; If (A_PriorKey="CapsLock")
-; SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off":"On"
-; Return
-
-#If, GetKeyState("CapsLock", "P")
-i::Up
-j::Left
-k::Down
-l::Right
-[::Home
-]::End
-N::send ^{left}
-M::send ^{Right}
-+N::send +^{left}
-+M::send +^{Right}
-,::send ^!{left}
-.::send ^!{Right}
-U::send {BackSpace}
-Y::send ^{BackSpace}
-return
-#If
-
-Hotkey, CapsLock, Off
-
+;navicate 执行单行sql
 $>!I::
 send {Home}
 send +{End}
