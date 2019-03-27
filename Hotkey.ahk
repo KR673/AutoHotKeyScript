@@ -20,11 +20,11 @@ RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
 
 ;RAlt & S::run C:\Users\Administrator\Desktop\AutoHotkey Script.ahk
 
-#IfWinActive, AutoHotkeyScript.ahk
+#IfWinActive, ahk_class Chrome_WidgetWin_1
 ~<^S::
-IfWinActive, AutoHotkeyScript.ahk
+IfWinActive, ahk_class Chrome_WidgetWin_1
 {
-	run AutoHotkeyScript.ahk
+	run Main.ahk
 	sleep 260
  	send {Enter}
 	Return
@@ -142,14 +142,4 @@ else {
 	WinActivate, ahk_class WizNoteMainFrame
 	return
 }
-
-; ----------------------------
-; 热字符串
-; ----------------------------
-
-:*:cjc::create java class
-:*:138p::13838530526
-:*:jpw::123456
-::jjj::1232423423
-:*:zq::  123123 {tab} 123456 {tab} 123456
 
