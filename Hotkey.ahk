@@ -100,3 +100,21 @@ else {
 	return
 }
 
+#IfWinActive, ahk_class SunAwtFrame
+	#If, GetKeyState("CapsLock", "P")
+		J & C::
+		send ^+A
+		sleep 100
+		send create` `java` `class
+		sleep 200
+		send {Enter}
+		return
+		J & P::
+		send ^+A
+		sleep 100
+		send create` `package
+		sleep 200
+		send {Enter}
+		return
+	#If
+#IfWinActive
