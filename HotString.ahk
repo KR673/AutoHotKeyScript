@@ -6,13 +6,13 @@
 :*:13p::13838530526
 :*:jpw::123456
 :*:vq::张崎_13989{tab}123456{tab}123456
-::ru::http://localhost:8003/#/home{Enter}
-::crm::http://localhost:8001/#/home{Enter}
+::ru::http://localhost:8003/#/home {Enter}
+::crm::http://localhost:8001/#/home {Enter}
 
 ; ----------------------------
 ; 常用sql
 ; ----------------------------
-::hotsql::
+::hsql::
 ; 示例: 要求选项与参数的简单输入框:
 Gui, New
 ;Gui, Add, Edit, vsqlSelect ym ; ym 选项开始一个新的控件列。
@@ -36,10 +36,10 @@ ButtonOK:
 Gui, Submit  ; 保存用户的输入到每个控件的关联变量中.
 If sqlSelect = 1
     {
-        send select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%');
+        send select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%')
     }
 If sqlSelect = 2
     {
-        send select * from UserYuanGong where DengLuZhangHao like '`%%param%`%';
+        send select * from UserYuanGong where DengLuZhangHao like '`%%param%`%'
     }
 Return

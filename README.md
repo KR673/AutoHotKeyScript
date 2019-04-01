@@ -1,6 +1,7 @@
 [toc]
 
 # AutoHotKeyScript
+
 autoHotKey脚本
 
 ## 热键&热字符串
@@ -33,6 +34,9 @@ autoHotKey脚本
 
 ### 3. switch
 
+## GUI
+
+> 可以使用smartGui快速布局
 
 ## **注意:**
-1. 字符串拼接直接连续写上就看可以了, 不用使用`+` 
+1. 字符串拼接直接连续写上就可以了, 不用使用`+` 
