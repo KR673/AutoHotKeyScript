@@ -8,6 +8,15 @@
 ::ru::http://localhost:8003/#/home {Enter}
 ::crm::http://localhost:8001/#/home {Enter}
 
+::xy::这个问题请您联系学员服务
+::hc::清空浏览器缓存试一下 ctrl {+} shift {+} delete ; 大括号可以提示autohotkey发送原始字符
+::xz::您可以联系您部门的行政处理
+::ilv::好的, 已经给您联系技术处理了, 请您稍等
+::dq::单Q
+::jt::您把页面截个全图吧, 我看一下
+::rdl::您重新登陆一下试试
+::zil::好的, 已经在处理呢, 您稍等
+
 ; ----------------------------
 ; 常用sql
 ; ----------------------------
@@ -27,7 +36,7 @@ WinSet, Transparent, 200 ,SQLSELECT ;设置窗口SQLSELECT 的透明度
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
-Gui, Add, ListBox, x12 y79 w230 h70 Cwhite, 1. Common 2. UserGroupId
+Gui, Add, ListBox, x12 y79 w230 h70 Cwhite, 1. Common 2. UserYuanGong 3. Crm_JiHui
 Return ;自动运行段结束。在用户进行操作前脚本会一直保持空闲状态.
 
 GuiClose:
@@ -39,6 +48,12 @@ If sqlSelect = 1
     }
 If sqlSelect = 2
     {
-        send select * from UserYuanGong where DengLuZhangHao like '`%%param%`%'
+        send select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%' or userGroupId = %param%
+    }
+If sqlSelect = 3
+    {
+        send select * from Crm_JiHui where mobile = '%param%'
     }
 Return
+
+

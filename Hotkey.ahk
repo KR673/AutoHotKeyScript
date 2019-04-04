@@ -118,3 +118,12 @@ else {
 		return
 	#If
 #IfWinActive
+
+!+J::
+	MouseClickDrag, Left, 1748, 13, 2900, 13 [, 10,R]
+return
+
+!+p::
+FileRead, abc, *c C:\Users\Administrator\Desktop\新建文本文档 (4).txt
+Send, %abc%.png
+return
