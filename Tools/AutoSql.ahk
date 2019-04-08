@@ -26,15 +26,15 @@ ButtonOK:
 Gui, Submit  ; 保存用户的输入到每个控件的关联变量中.
 If sqlSelect = 1
     {
-        send select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%')
+        send, select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%')
     }
 If sqlSelect = 2
     {
-        send select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%' or userGroupId = %param%
+        send, select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%' or userGroupId = %param%
     }
 If sqlSelect = 3
     {
-        send select * from Crm_JiHui where mobile = '%param%'
+        send, select * from Crm_JiHui where mobile = '%param%'
     }
 ExitApp
 
