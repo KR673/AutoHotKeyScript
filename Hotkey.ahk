@@ -4,7 +4,7 @@
 ;在编辑页面, 保存时自动重启脚本
 #IfWinActive, ahk_class Chrome_WidgetWin_1
 ~<^S::
-IfWinActive, ahk_class Chrome_WidgetWin_1
+IfWinActive, ahk_exe Code.exe
 {
 	run Main.ahk
 	sleep 300
@@ -127,3 +127,9 @@ return
 FileRead, abc, *c C:\Users\Administrator\Desktop\新建文本文档 (4).txt
 Send, %abc%.png
 return
+
+::hsql:: 
+run, AutoSql.ahk, .\tools 
+return
+
+<^<!P:: run, Clock.ahk, .\tools 
