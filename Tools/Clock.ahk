@@ -11,7 +11,7 @@ Gui,2: Add, Button, x202 y9 w60 h20 default, OK
 Gui,2: Show, x202 y162 h42 w276 Center, 
 Return
 
-2GuiClose:
+2GuiClose: ; 窗口时间, 当窗口2关闭时执行接下来的代码
 2ButtonOK:
 Gui,2: Submit  ; 保存用户的输入到每个控件的关联变量中.
 isTime := Time * 1000 ;如果使用%包裹, 不管此变量 包含 什么内容都会被假定为另一个变量
