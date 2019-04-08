@@ -129,7 +129,7 @@ Send, %abc%.png
 return
 
 ::hsql:: 
-run, AutoSql.ahk, .\tools 
+run, AutoSql.ahk, .\Tools 
 return
 
-<^<!P:: run, Clock.ahk, .\tools 
+<^<!P:: run, Clock.ahk, .\Tools 
