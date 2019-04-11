@@ -6,7 +6,8 @@
 ~<^S::
 IfWinActive, ahk_exe Code.exe
 {
-	run Main.ahk
+	;run Main.ahk
+	Reload
 	sleep 300
  	send {Enter}
 	Return
@@ -133,3 +134,4 @@ run, AutoSql.ahk, .\Tools
 return
 
 <^<!P:: run, Clock.ahk, .\Tools 
+#h:: run, HotStringAdd.ahk, .\Tools   ; Win+H hotkey

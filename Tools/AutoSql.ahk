@@ -18,7 +18,7 @@ WinSet, Transparent, 200 ,SQLSELECT ;设置窗口SQLSELECT 的透明度
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
-Gui, Add, ListBox, x12 y79 w230 h70 Cwhite, 1. Common 2. UserYuanGong 3. Crm_JiHui
+Gui, Add, ListBox, x12 y79 w230 h70 Cwhite, 1. Common 2. UserYuanGong ` 3. Crm_JiHui
 Return ;自动运行段结束。在用户进行操作前脚本会一直保持空闲状态.
 
 1GuiClose: ;前边的为窗口编号
@@ -26,15 +26,15 @@ ButtonOK:
 Gui, Submit  ; 保存用户的输入到每个控件的关联变量中.
 If sqlSelect = 1
     {
-        send, select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%')
+        SendInput , select * from CommonDict where TypeIndex in (select TableId from CommonDict where TypeName like '`%%param%`%')
     }
 If sqlSelect = 2
     {
-        send, select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%' or userGroupId = %param%
+        SendInput, select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%'
     }
 If sqlSelect = 3
     {
-        send, select * from Crm_JiHui where mobile = '%param%'
+        SendInput, select * from Crm_JiHui where mobile = '%param%'
     }
 ExitApp
 
