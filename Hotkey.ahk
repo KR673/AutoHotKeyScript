@@ -2,7 +2,7 @@
 ;RAlt & S::run C:\Users\Administrator\Desktop\AutoHotkey Script.ahk
 
 ;在编辑页面, 保存时自动重启脚本
-#IfWinActive, ahk_class Chrome_WidgetWin_1
+#IfWinActive, ahk_exe Code.exe
 ~<^S::
 IfWinActive, ahk_exe Code.exe
 {
