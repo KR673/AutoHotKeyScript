@@ -4,6 +4,7 @@
 
 ; 示例: 要求选项与参数的简单输入框:
 Gui, New
+GUI, -sysmenu +AlwaysOnTop -caption +Border
 ;Gui, Add, Edit, vsqlSelect ym ; ym 选项开始一个新的控件列。
 ;多个窗口时, 需要在Gui 后边的参数是窗口编号, 用于GuiClose识别, 
 Gui, color, 000000, 000000
@@ -18,7 +19,7 @@ WinSet, Transparent, 200 ,SQLSELECT ;设置窗口SQLSELECT 的透明度
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
 Gui, Font, S8 Cwhite, Verdana
-Gui, Add, ListBox, x12 y79 w230 h70 Cwhite, 1. Common 2. UserYuanGong`n 3. Crm_JiHui
+Gui, Add, ListBox, x12 y79 w230 h70 Cwhite ReadOnly, 1. Common    2. UserYuanGong |3. Crm_JiHui 
 Return ;自动运行段结束。在用户进行操作前脚本会一直保持空闲状态.
 
 GuiClose: ;前边的为窗口编号
@@ -30,7 +31,7 @@ If sqlSelect = 1
     }
 If sqlSelect = 2
     {
-        SendInput, select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%'
+        SendInput, select * from UserYuanGong where DengLuZhangHao like '`%%param%`%' or xingming like '`%%param%`%' or UserGroupId LIKE '`%%param%`%'
     }
 If sqlSelect = 3
     {
