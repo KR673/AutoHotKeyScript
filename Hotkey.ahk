@@ -124,7 +124,7 @@ $<!Esc::send, !{F4}
 
 
 ::hsql:: 
-run, AutoSql.ahk, .\Tools 
+	run, AutoSql.ahk, .\Tools 
 return
 
 <^<!P:: run, Clock.ahk, .\Tools 
