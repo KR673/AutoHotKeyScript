@@ -21,7 +21,6 @@ send {Home}
 send +{End}
 send ^R
 Sleep 150
-send {Right}
 return
 
 $>!W::
@@ -100,6 +99,18 @@ else {
 	WinActivate, ahk_class WizNoteMainFrame
 	return
 }
+
+$>!S::
+IfWinActive, ahk_class YodaoMainWndClass
+{
+    WinMinimize, ahk_class YodaoMainWndClass
+	return
+}
+else {
+	WinActivate, ahk_class YodaoMainWndClass
+	return
+}
+
 
 #IfWinActive, ahk_class SunAwtFrame
 	#If, GetKeyState("CapsLock", "P")

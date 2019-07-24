@@ -10,12 +10,12 @@ RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
 ; Return
 
 #If, GetKeyState("CapsLock", "P")
-i::Up
-j::Left
-k::Down
+k::Up
+h::Left
+j::Down
 l::Right
-[::Home
-]::End
+6::Home
+4::End
 N::send ^{left}
 M::send ^{Right}
 +N::send +^{left}
