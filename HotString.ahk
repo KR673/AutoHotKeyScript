@@ -4,11 +4,11 @@
 
 ;o 替换的时候忽略终止符
 
-:*:13p::13838530526
-:*:jpw::123456
-:*:vq::张崎_13989{tab}123456{tab}123456 ;大括号可以触发按键
-:o*:ru;::http://localhost:8003/#/home
-:o*:crm;::http://localhost:8001/#/home
+; :*:13p::13838530526
+; :*:jpw::123456
+; :*:vq::张崎_13989{tab}123456{tab}123456 ;大括号可以触发按键
+; :o*:ru;::http://localhost:8003/#/home
+; :o*:crm;::http://localhost:8001/#/home
 
 ; :o:xy::这个问题您需要联系技术服务服务
 ; :o:hc::清空浏览器缓存试一下 快捷键 : ctrl {+} shift {+} delete ; 大括号可以提示autohotkey发送原始字符

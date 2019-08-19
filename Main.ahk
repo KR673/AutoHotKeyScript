@@ -6,5 +6,5 @@ SetWorkingDir %A_ScriptDir%
 SetTitleMatchMode, 2 ;设置标题匹配模式模糊
 
 #Include HotString.ahk
-#Include HotKey_MoveCursor.ahk
+#Include Custom_CapsLock.ahk
 #Include Hotkey.ahk

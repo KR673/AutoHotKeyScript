@@ -16,6 +16,14 @@ j::Down
 l::Right
 6::Home
 4::End
+z::send ^Z
+x::send ^X
+c::send ^C
+v::send ^V
+a::send ^A
+s::send ^S
+d::send ^D
+f::send ^F
 N::send ^{left}
 M::send ^{Right}
 +N::send +^{left}
