@@ -22,8 +22,8 @@ c::send ^C
 v::send ^V
 a::send ^A
 s::send ^S
-d::send ^D
-f::send ^F
+b::send {PgDn}
+f::send {PgUp}
 N::send ^{left}
 M::send ^{Right}
 +N::send +^{left}
