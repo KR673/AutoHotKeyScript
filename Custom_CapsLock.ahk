@@ -16,12 +16,12 @@ j::Down
 l::Right
 6::Home
 4::End
-z::send ^Z
-x::send ^X
-c::send ^C
-v::send ^V
-a::send ^A
-s::send ^S
+z::send ^{z}
+x::send ^{x}
+c::send ^{c}
+v::send ^{v}
+a::send ^{a}
+s::send ^{s}
 b::send {PgDn}
 f::send {PgUp}
 N::send ^{left}
@@ -32,6 +32,7 @@ M::send ^{Right}
 .::send ^!{Right}
 U::send {BackSpace}
 Y::send ^{BackSpace}
+`;::send ^{;} 
 return
 #If
 
