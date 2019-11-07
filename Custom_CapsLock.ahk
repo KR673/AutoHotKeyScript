@@ -22,8 +22,8 @@ c::send ^{c}
 v::send ^{v}
 a::send ^{a}
 s::send ^{s}
-b::send {PgDn}
 f::send {PgUp}
+g::send {PgDn}
 N::send ^{left}
 M::send ^{Right}
 +N::send +^{left}
@@ -32,7 +32,10 @@ M::send ^{Right}
 .::send ^!{Right}
 U::send {BackSpace}
 Y::send ^{BackSpace}
-`;::send ^{;} 
+`;::send ^{;}
+!B::send ^!{b} 
+b::send ^{b}
+Tab::send ^{Tab}
 return
 #If
 
