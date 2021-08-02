@@ -8,7 +8,6 @@ RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
 ; If (A_PriorKey="CapsLock")
 ; SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off":"On"
 ; Return
-
 #If, GetKeyState("CapsLock", "P")
 k::Up
 h::Left
