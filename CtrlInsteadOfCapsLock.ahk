@@ -53,4 +53,3 @@ RAlt & LCtrl::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On" ;
     Tab::send ^{Tab}
     return
 #If
-
