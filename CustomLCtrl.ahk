@@ -1,27 +1,3 @@
-; Ctrl::CapsLock
-; SetCapsLockState, AlwaysOff
-
-; SetCapsLockState, AlwaysOff
-
-CapsLock::Ctrl
-LCtrl::
-; Send, {CapsLock down}
-SetCapsLockState, Off
-return
-; *capslock::Ctrl ; Ctrl::
-; Send {CapsLock}
-; Return
-; Hotkey, CapsLock, Off
-RAlt & LCtrl::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On" ; 
-
-; $CapsLock::
-; KeyWait, CapsLock
-; If (A_PriorKey="CapsLock")
-; SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off":"On"
-; Return
-
-^Space::send #{Space}
-
 #If, GetKeyState("LCtrl", "P")
     k::Up
     h::Left

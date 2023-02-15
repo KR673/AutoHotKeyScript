@@ -3,11 +3,6 @@
 Hotkey, CapsLock, Off
 RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
 
-; $CapsLock::
-; KeyWait, CapsLock
-; If (A_PriorKey="CapsLock")
-; SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off":"On"
-; Return
 #If, GetKeyState("CapsLock", "P")
 k::Up
 h::Left
@@ -37,4 +32,3 @@ b::send ^{b}
 Tab::send ^{Tab}
 return
 #If
-
