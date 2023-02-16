@@ -8,5 +8,6 @@ SetTitleMatchMode, 2 ;设置标题匹配模式模糊
 
 ; 取清capsLock原功能并添加新功能
 
+#Include HotkeyOfVimModel.ahk
 #Include CustomInputMethodSwitchKey.ahk
 #Include CustomCapsLock.ahk
