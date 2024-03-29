@@ -1,8 +1,16 @@
+; ^k::send, {Up}
+; ^h::send, {Left}
+; ^l::send, {Right}
+; ^j::send, {Down}
+; ^6::send, {Home}
+; ^4::send, {End}
+; ^u::send, {BackSpace}
+
 #If, GetKeyState("LCtrl", "P")
     k::Up
     h::Left
-    j::Down
     l::Right
+    j::Down
     6::Home
     4::End
     z::send ^{z}

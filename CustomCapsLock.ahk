@@ -1,4 +1,10 @@
 ; 取消CapsLock原有的功能, 改为alt + caps
+
+
+CapsLock::
+SetCapsLockState, Off
+return
+
 *Capslock::SetCapsLockState, Off
 Hotkey, CapsLock, Off
 RAlt & Capslock::SetCapsLockState, % GetKeyState("CapsLock", "T") ? "Off" : "On"
